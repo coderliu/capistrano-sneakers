@@ -133,7 +133,7 @@ namespace :sneakers do
   end
 
   def sneakers_each_process_with_index(reverse = false, &block)
-    _pid_files = pid_files
+    _pid_files = sneakers_pid_files
     _pid_files.reverse! if reverse
     _pid_files.each_with_index do |pid_file, idx|
       within release_path do
